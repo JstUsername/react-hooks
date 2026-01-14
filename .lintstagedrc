@@ -1,0 +1,9 @@
+{
+  "**/*.{ts,tsx}": [
+    "npm run type-check",
+    "npm run format"
+  ],
+  "**/*.{js,cjs,mjs,jsx}": [
+    "npm run format"
+  ]
+}
