@@ -2,13 +2,13 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 type VisibilityChangeHandler = (isVisible: boolean) => void;
 
-interface UseDocumentVisibilityReturn {
+interface UseDocumentVisibility {
   visible: boolean;
   count: number;
   onVisibilityChange: (handler: VisibilityChangeHandler) => () => void;
 }
 
-export const useDocumentVisibility = (): UseDocumentVisibilityReturn => {
+export const useDocumentVisibility = (): UseDocumentVisibility => {
   const [visible, setVisible] = useState<boolean>(!document.hidden);
   const [count, setCount] = useState<number>(0);
 
