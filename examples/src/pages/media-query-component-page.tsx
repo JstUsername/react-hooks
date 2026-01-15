@@ -1,4 +1,4 @@
-import { MediaQuery } from '@g4ndy/react-hooks';
+import { MediaQuery } from '../../../src';
 
 export const MediaQueryComponentPage = () => {
   return (

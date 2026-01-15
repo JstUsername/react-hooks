@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDocumentVisibility } from '@g4ndy/react-hooks';
+import { useDocumentVisibility } from '../../../src';
 
 export const DocumentVisibilityHookPage = () => {
   const { count, visible, onVisibilityChange } = useDocumentVisibility();
