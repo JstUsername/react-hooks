@@ -20,10 +20,10 @@ This library is a curated collection of custom React hooks designed to simplify 
 
 ## ✨ Features
 
-- 🎯 **Type-Safe** - Full TypeScript support with comprehensive type definitions
-- 🪶 **Lightweight** - Zero dependencies beyond React
-- 📦 **Tree-Shakeable** - Import only what you need
-- ⚡ **Performance-Optimized** - Efficient implementations following React best practices
+- 🎯 **Type-Safe** - Full TypeScript support with comprehensive type definitions;
+- 🪶 **Lightweight** - Zero dependencies beyond React;
+- 📦 **Tree-Shakable** - Import only what you need;
+- ⚡ **Performance-Optimized** - Efficient implementations following React best practices;
 
 ## 📦 Installation
 
@@ -71,8 +71,8 @@ export const DocumentVisibilityExample = () => {
 ## 📚 Available Hooks
 
 ### Browser APIs
-- `useMediaQuery` - Respond to media query changes
-- `useDocumentVisibility` - Track document visibility and tab switching events
+- `useMediaQuery` - Respond to media query changes;
+- `useDocumentVisibility` - Track document visibility and tab switching events (also has support for the MediaQuery component).
 
 ## 🛠️ Development
 
