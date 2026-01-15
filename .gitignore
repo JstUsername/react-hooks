@@ -63,6 +63,7 @@ jspm_packages/
 
 # Build output
 dist
+examples/dist
 
 .DS_*
 **/*.backup.*

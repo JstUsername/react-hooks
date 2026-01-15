@@ -36,5 +36,5 @@ export default defineConfig([
     },
   },
   eslintConfigPrettier,
-  globalIgnores(['./node_modules/*', './dist/*']),
+  globalIgnores(['./node_modules/*', './dist/*', './examples/dist/*']),
 ]);
