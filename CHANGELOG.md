@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.2.0...react-hooks-v1.3.0) (2026-01-15)
+
+
+### Features
+
+* добавлены примеры, деплой на github pages, мигрирован lintstaged ([4b43669](https://github.com/JstUsername/react-hooks/commit/4b436690eadf3fe625fd734df4db96ff9b78ba44))
+
 ## [1.2.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.1.0...react-hooks-v1.2.0) (2026-01-15)
 
 
