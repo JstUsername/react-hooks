@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.0.1...react-hooks-v1.1.0) (2026-01-15)
+
+
+### Features
+
+* добавлен хук useMediaQuery и компонент MediaQuery ([b0afcfe](https://github.com/JstUsername/react-hooks/commit/b0afcfe32a9c5258ef1ab7a7bd181e11548831e6))
+* добавлен хук useMediaQuery и компонент MediaQuery ([28338aa](https://github.com/JstUsername/react-hooks/commit/28338aa8ff1a4517541cfe07392b97aaa3067acb))
+
 ## [1.0.1](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.0.0...react-hooks-v1.0.1) (2026-01-15)
 
 
