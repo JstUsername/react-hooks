@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.1.0...react-hooks-v1.2.0) (2026-01-15)
+
+
+### Features
+
+* обновлен README.md ([2cf0cd4](https://github.com/JstUsername/react-hooks/commit/2cf0cd408f33233e95f2652fec51ff89cf8f01f2))
+
 ## [1.1.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.0.1...react-hooks-v1.1.0) (2026-01-15)
 
 
