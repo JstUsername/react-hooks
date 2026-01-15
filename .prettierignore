@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# Debug logs
+npm-debug.*
+
+# OS files
+.DS_Store
+*.pem
+
+# Env files
+.env*
+
+# IDE files
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Lock & YAML files
+*.yaml
+*.yml
+
+# Project docs
+README.md
