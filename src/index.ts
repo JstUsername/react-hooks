@@ -1,1 +1,1 @@
-export { useDocumentVisibility } from './use-document-visibility';
+export * from './hooks';
