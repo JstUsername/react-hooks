@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.3.0...react-hooks-v1.3.1) (2026-01-15)
+
+
+### Bug Fixes
+
+* скорректирован README, добавлена информация о Github pages ([dbd4fc0](https://github.com/JstUsername/react-hooks/commit/dbd4fc0b867f00f02380f40d7fbdadedf47f0e53))
+
 ## [1.3.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.2.0...react-hooks-v1.3.0) (2026-01-15)
 
 
