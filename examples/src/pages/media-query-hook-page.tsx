@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@g4ndy/react-hooks';
+import { useMediaQuery } from '../../../src';
 
 export const MediaQueryHookPage = () => {
   const isDesktopOrLaptop = useMediaQuery({
