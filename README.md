@@ -5,10 +5,11 @@
 [![npm version](https://img.shields.io/npm/v/@g4ndy/react-hooks.svg)](https://www.npmjs.com/package/@g4ndy/react-hooks)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![Live Demo](https://img.shields.io/badge/demo-live-success.svg)](https://jstusername.github.io/react-hooks/)
 
 A collection of custom React hooks created for self-education and practical use.
 
-[NPM Package](https://www.npmjs.com/package/@g4ndy/react-hooks) • [Report Bug](https://github.com/JstUsername/react-hooks/issues) • [Request Feature](https://github.com/JstUsername/react-hooks/issues)
+[NPM Package](https://www.npmjs.com/package/@g4ndy/react-hooks) • [Report Bug](https://github.com/JstUsername/react-hooks/issues) • [Request Feature](https://github.com/JstUsername/react-hooks/issues) • [Live Demo](https://jstusername.github.io/react-hooks/)
 
 </div>
 
