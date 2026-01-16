@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.3.1...react-hooks-v1.4.0) (2026-01-16)
+
+
+### Features
+
+* добавлены unit тесты, исправлен use-media-query, обновлен CI ([165ca27](https://github.com/JstUsername/react-hooks/commit/165ca27e2084e85cfbd0ea48691fee0a5d7a15dc))
+
 ## [1.3.1](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.3.0...react-hooks-v1.3.1) (2026-01-15)
 
 
