@@ -27,6 +27,8 @@ export const useMediaQuery = ({ query }: UseMediaQueryProps) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const mql = window.matchMedia(query);
+    // eslint-disable-next-line
+    setIsMatches(mql.matches);
 
     const handler = (event: MediaQueryListEvent) => {
       setIsMatches(event.matches);
