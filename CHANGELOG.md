@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.4.0...react-hooks-v1.5.0) (2026-01-20)
+
+
+### Features
+
+* добавлен coverage, скорректированы тесты, обновлен README ([60eb0fe](https://github.com/JstUsername/react-hooks/commit/60eb0fe476949abbd652cf7edc5c0480f5faf72d))
+* добавлены команды для релиза ([e3941e2](https://github.com/JstUsername/react-hooks/commit/e3941e25db2c12db89e464b533d89bf35385871a))
+
 ## [1.4.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.3.1...react-hooks-v1.4.0) (2026-01-16)
 
 
