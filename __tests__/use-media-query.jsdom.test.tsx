@@ -1,5 +1,5 @@
-import { describe, test, expect, beforeEach, vi } from 'vitest';
-import { useMediaQuery, MediaQuery } from '../src';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
+import { MediaQuery, useMediaQuery } from '../src';
 import { page } from '@vitest/browser/context';
 import { render, renderHook } from 'vitest-browser-react';
 
@@ -67,7 +67,6 @@ describe('useMediaQuery', () => {
 
   test('works with max-width', async () => {
     await page.viewport(500, 768);
-
     const { result } = await renderHook(() => useMediaQuery({ query: '(max-width: 768px)' }));
 
     await vi.waitFor(async () => {
@@ -77,7 +76,6 @@ describe('useMediaQuery', () => {
 
   test('works with orientation', async () => {
     await page.viewport(1024, 768);
-
     const { result } = await renderHook(() => useMediaQuery({ query: '(orientation: landscape)' }));
 
     await vi.waitFor(async () => {
@@ -87,7 +85,6 @@ describe('useMediaQuery', () => {
 
   test('works with height', async () => {
     await page.viewport(1024, 500);
-
     const { result } = await renderHook(() => useMediaQuery({ query: '(min-height: 400px)' }));
 
     await vi.waitFor(async () => {
@@ -97,7 +94,6 @@ describe('useMediaQuery', () => {
 
   test('works with complex queries', async () => {
     await page.viewport(1024, 768);
-
     const { result } = await renderHook(() => useMediaQuery({ query: '(min-width: 768px) and (max-width: 1200px)' }));
 
     await vi.waitFor(async () => {
@@ -304,5 +300,40 @@ describe('MediaQuery Component', () => {
 
       await unmount();
     }
+  });
+
+  test('handles invalid/unknown prop gracefully', async () => {
+    const { getByTestId } = await render(
+      // @ts-expect-error intentionally passing an invalid prop
+      <MediaQuery unknownProp={123}>
+        <div data-testid="content">Content</div>
+      </MediaQuery>,
+    );
+
+    await expect.element(getByTestId('content')).not.toBeInTheDocument();
+  });
+
+  test('renders nothing when query is empty string', async () => {
+    const { getByTestId } = await render(
+      <MediaQuery minWidth={undefined}>
+        <div data-testid="content">Content</div>
+      </MediaQuery>,
+    );
+
+    await vi.waitFor(async () => {
+      await expect.element(getByTestId('content')).not.toBeInTheDocument();
+    });
+  });
+
+  test('renders nothing when no media query props are provided', async () => {
+    const { getByTestId } = await render(
+      <MediaQuery>
+        <div data-testid="content">Content</div>
+      </MediaQuery>,
+    );
+
+    await vi.waitFor(async () => {
+      await expect.element(getByTestId('content')).not.toBeInTheDocument();
+    });
   });
 });
