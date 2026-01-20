@@ -43,7 +43,9 @@
     "type-check": "npm run type-check:lib && npm run type-check:examples",
     "format": "prettier --write \"**/*.{js,jsx,cjs,mjs,ts,tsx}\"",
     "prepublishOnly": "npm run lint && npm run format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release-pr": "env-cmd -x -- release-please release-pr --token=\\$GITHUB_TOKEN --repo-url=https://github.com/JstUsername/react-hooks",
+    "github-release": "env-cmd -x -- release-please github-release --token=\\$GITHUB_TOKEN --repo-url=https://github.com/JstUsername/react-hooks"
   },
   "peerDependencies": {
     "react": ">=17"
@@ -61,6 +63,7 @@
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/browser-playwright": "^4.0.17",
     "@vitest/coverage-istanbul": "^4.0.17",
+    "env-cmd": "^11.0.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
