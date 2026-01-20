@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.5.0...react-hooks-v1.5.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* browser router заменен на hash, для совместимости с gh pages ([b0ce5a8](https://github.com/JstUsername/react-hooks/commit/b0ce5a8382acf1aecc4bcac54bed7dc7c002df28))
+
 ## [1.5.0](https://github.com/JstUsername/react-hooks/compare/react-hooks-v1.4.0...react-hooks-v1.5.0) (2026-01-20)
 
 
