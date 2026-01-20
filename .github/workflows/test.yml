@@ -9,14 +9,54 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Run Type-check
+        run: npm run type-check
+
+      - name: Run Lint
+        run: npm run lint
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-      - name: Run tests
-        run: npm run test
+
+      - name: Run tests with coverage
+        run: npm run coverage
+
+      - name: Extract Coverage Percentage
+        id: extract_pct
+        if: github.ref == 'refs/heads/main'
+        run: |
+          PCT=$(jq '.total.lines.pct' coverage/coverage-summary.json)
+          echo "percentage=$PCT" >> $GITHUB_OUTPUT
+          
+          if (( $(echo "$PCT >= 90" | bc -l) )); then
+            echo "color=brightgreen" >> $GITHUB_OUTPUT
+          elif (( $(echo "$PCT >= 75" | bc -l) )); then
+            echo "color=yellowgreen" >> $GITHUB_OUTPUT
+          elif (( $(echo "$PCT >= 50" | bc -l) )); then
+            echo "color=orange" >> $GITHUB_OUTPUT
+          else
+            echo "color=red" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Coverage Badge
+        if: github.ref == 'refs/heads/main'
+        uses: Schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 5fea402156d30ea123f857db9859a42b
+          filename: react-hooks-coverage.json
+          label: coverage
+          message: ${{ steps.extract_pct.outputs.percentage }}%
+          color: ${{ steps.extract_pct.outputs.color }}

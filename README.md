@@ -5,6 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/@g4ndy/react-hooks.svg)](https://www.npmjs.com/package/@g4ndy/react-hooks)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/JstUsername/5fea402156d30ea123f857db9859a42b/raw/react-hooks-coverage.json)
 [![Live Demo](https://img.shields.io/badge/demo-live-success.svg)](https://jstusername.github.io/react-hooks/)
 
 A collection of custom React hooks created for self-education and practical use.
@@ -91,6 +92,18 @@ npm run build
 # Lint code
 npm run lint
 ```
+
+## 🧪 Testing
+
+The library uses [Vitest](https://vitest.dev/) for unit testing hooks and [Vitest Browser Mode](https://vitest.dev/guide/browser.html) (powered by Playwright) to ensure hooks behave correctly in real browser environments.
+
+### Test Commands
+- `npm run test` — Run all tests once.
+- `npm run dev:test` — Run tests in watch mode during development.
+- `npm run coverage` — Generate a test coverage report in the `coverage/` directory.
+
+### Continuous Integration
+All tests, linting, and type-checks are automatically executed on every Push or Pull Request to the `main` and `dev` branches via GitHub Actions.
 
 ## 📝 Contributing
 

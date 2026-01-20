@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useMemo, useState } from 'react';
 import { RequireOnlyOne } from '../types';
 
 interface UseMediaQueryProps {
-  query: string;
+  query: string | undefined;
 }
 
 interface BaseMediaQueryProps {
@@ -21,11 +21,11 @@ type MediaQueryProps = RequireOnlyOne<BaseMediaQueryProps> & {
 
 export const useMediaQuery = ({ query }: UseMediaQueryProps) => {
   const [isMatches, setIsMatches] = useState<boolean>(
-    typeof window === 'undefined' ? false : window.matchMedia(query).matches,
+    typeof window === 'undefined' || !query ? false : window.matchMedia(query).matches,
   );
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !query) return;
     const mql = window.matchMedia(query);
     // eslint-disable-next-line
     setIsMatches(mql.matches);
@@ -56,8 +56,9 @@ export const MediaQuery = ({ children, ...props }: MediaQueryProps) => {
       maxHeight: (val) => `(max-height: ${val}px)`,
     };
 
-    const key = Object.keys(props)[0]! as keyof BaseMediaQueryProps;
-    return queryMap[key]?.((props as BaseMediaQueryProps)[key]) || '';
+    const key = Object.keys(props)[0]! as keyof BaseMediaQueryProps | undefined;
+    if (!key) return undefined;
+    return queryMap[key]?.(props[key]);
   }, [props]);
 
   const isMatches = useMediaQuery({ query });
